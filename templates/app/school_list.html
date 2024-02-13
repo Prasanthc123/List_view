@@ -1,18 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends 'app/dummy.html' %}
+
+{% block title %}
+<title>SchoolList</title>
+{% endblock %}
+
+{% block body_block %}
+
     <center>
         <h1>Listview data</h1>
-        {% for so in schools%}
+        {% for so in schools %}
             <a href="{{so.pk}}"> <h2>{{so.sname}}</h2></a>
-            <h2>{{so.sprincipal}}</h2>
-            <h2>{{so.slocation}}</h2>
+            
         {% endfor %}
     </center>
-</body>
-</html>
+{% endblock %}
